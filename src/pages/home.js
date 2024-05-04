@@ -82,31 +82,38 @@ const Home = () => {
       <div class="data-from">
         <p class="data-from-text">USING DATA FROM</p>
         <div class="data-from-logos">
-          <img
-            src="assets/images/Departmental_Logo.png"
-            alt="Department for Business, Energy & Industrial Strategy Logo"
-            class="df-logo"
-          />
-          <img
-            src="assets/images/oxford.png"
-            alt="University of Oxford Logo"
-            class="df-logo"
-          />
-          <img
-            src="assets/images/National-Grid.png"
-            alt="NationalGridESO Logo"
-            class="df-logo"
-          />
-          <img
-            src="assets/images/HM_Government_logo.png"
-            alt="HM Government Logo"
-            class="df-logo"
-          />
-          <img
-            src="assets/images/edf.png"
-            alt="Environmental Defense Fund Logo"
-            class="df-logo"
-          />
+          <a href="https://www.nationalgrideso.com/">
+            <img
+              src="assets/images/NGESO_logo.png"
+              alt="National Grid ESO logo"
+              class="df-logo"
+              id="zoom1"
+            />
+          </a>
+          <a href="https://www.edf.org/europe">
+            <img
+              src="assets/images/EDF_logo.png"
+              alt="Energy Defense Fund Europe logo"
+              class="df-logo"
+              id="zoom2"
+            />
+          </a>
+          <a href="http://www.cs.ox.ac.uk/">
+            <img
+              src="assets/images/Oxford_logo.png"
+              alt="University of Oxford, Department of Computer Science logo"
+              class="df-logo"
+              id="zoom3"
+            />
+          </a>
+          <a href="https://www.wwf.org.uk/">
+            <img
+              src="assets/images/WWF_logo.png"
+              alt="WWF logo"
+              class="df-logo"
+              id="zoom4"
+            />
+          </a>
         </div>
       </div>
       <div class="uk-energy-tracker" id="uk-energy-tracker-scroll">

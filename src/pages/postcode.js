@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import Chart from "chart.js/auto";
+import Navbar from "../components/NavBar";
+import Footer from "../components/Footer";
 
 const PostcodeDisplay = () => {
   // console.log(state)
@@ -9,16 +11,11 @@ const PostcodeDisplay = () => {
 
     if (postcode) {
       fetchChartData(postcode);
-    } else {
-      document.getElementById("myChart").textContent = "No postcode provided.";
     }
   }, []);
 
-
-
-
   const fetchChartData = (postcode) => {
-    console.log(postcode)
+    console.log(postcode);
     const ukRegions = {
       AB: "North Scotland",
       AL: "East England",
@@ -144,54 +141,52 @@ const PostcodeDisplay = () => {
     };
 
     const regionIds = {
-      'North Scotland': 1,
-      'South Scotland': 2,
-      'North West England': 3,
-      'North East England': 4,
-      'Yorkshire': 5,
-      'North Wales': 6,
-      'South Wales': 7,
-      'West Midlands': 8,
-      'East Midlands': 9,
-      'East England': 10,
-      'South West England': 11,
-      'South England': 12,
-      'London': 13,
-      'South East England': 14,
-      'England': 15,
-      'Scotland': 16,
-      'Wales': 17
+      "North Scotland": 1,
+      "South Scotland": 2,
+      "North West England": 3,
+      "North East England": 4,
+      Yorkshire: 5,
+      "North Wales": 6,
+      "South Wales": 7,
+      "West Midlands": 8,
+      "East Midlands": 9,
+      "East England": 10,
+      "South West England": 11,
+      "South England": 12,
+      London: 13,
+      "South East England": 14,
+      England: 15,
+      Scotland: 16,
+      Wales: 17,
     };
 
     const mySlice = (postcode) => {
-      let myPostcode = ""
-      const alphabet = new Set("abcdefghijklmnopqrstuvwxyz".split(''));
+      let myPostcode = "";
+      const alphabet = new Set("abcdefghijklmnopqrstuvwxyz".split(""));
 
       for (let char of postcode) {
         if (alphabet.has(char.toLowerCase())) {
           myPostcode += char.toUpperCase();
           if (myPostcode.length === 2) {
-            return myPostcode
+            return myPostcode;
           }
         }
       }
-      return myPostcode
-    }
+      return myPostcode;
+    };
 
     const resultElement = document.getElementById("myChart");
 
-    const slicedRegionId = mySlice(postcode)
+    const slicedRegionId = mySlice(postcode);
     const region = ukRegions[slicedRegionId];
     if (region) {
       fetch(`https://api.carbonintensity.org.uk/regional`)
         .then((response) => response.json())
         .then((data) => {
           if (data.data && data.data.length > 0 && data.data[0].regions) {
-            const regionData = data.data[0].regions.find(
-              (regionData) => {
-                return regionData.regionid === regionIds[region]
-              }
-            );
+            const regionData = data.data[0].regions.find((regionData) => {
+              return regionData.regionid === regionIds[region];
+            });
 
             if (regionData) {
               const generationMix = regionData.generationmix;
@@ -199,6 +194,7 @@ const PostcodeDisplay = () => {
               const labels = generationMix.map((fuel) => fuel.fuel);
               const backgroundColors = getFuelColors(generationMix.length);
 
+              const titleText = `Generation Mix by Fuel Type for ${postcode}`;
               const myChart = new Chart(resultElement, {
                 type: "bar",
                 data: {
@@ -211,9 +207,11 @@ const PostcodeDisplay = () => {
                   ],
                 },
                 options: {
-                  title: {
-                    display: true,
-                    text: "Generation Mix by Fuel Type",
+                  plugins: {
+                    title: {
+                      display: true,
+                      text: titleText,
+                    },
                   },
                   legend: {
                     display: false,
@@ -264,7 +262,18 @@ const PostcodeDisplay = () => {
     }
   };
 
-  return <canvas id="myChart" width="400" height="200"></canvas>;
+  return (
+    <div>
+      <Navbar />
+      <canvas
+        id="myChart"
+        width="400"
+        height="200"
+        class="postcode-main"
+      ></canvas>
+      <Footer />
+    </div>
+  );
 };
 
 export default PostcodeDisplay;

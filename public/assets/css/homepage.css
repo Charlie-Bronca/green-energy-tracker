@@ -176,6 +176,7 @@ body {
 .data-from-logos {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -184,6 +185,20 @@ body {
     min-width: 0;
     padding-left: 10px;
     padding-right: 10px;
+    zoom: 50%;
+}
+
+#zoom1 {
+    zoom: 45%;
+}
+#zoom2 {
+    zoom: 60%;
+}
+#zoom3 {
+    zoom: 45%;
+}
+#zoom4 {
+    zoom: 40%;
 }
 
 .uk-energy-tracker {

@@ -126,3 +126,18 @@ html {
   font-weight: 500;
   color: black;
 }
+
+.postcode-main {
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+.back-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #2F5B3F;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
