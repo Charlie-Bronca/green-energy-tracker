@@ -6,10 +6,10 @@ export default function Privacy() {
     return (
     <>
         <NavBar />
-        <div class="main-section-other" id="main-section-scroll">
+        <main class="main-section-other" id="main-section-scroll">
             <div class="main-container-other">
                 <div class="main-column1-other">
-                    <h2 class="main-h2-other">Privacy Policy</h2>
+                    <h3 class="main-h3-other">Privacy Policy</h3>
                     <p class="main-paragraph-other">At Green Energy Tracker, we are committed to protecting your privacy and safeguarding your personal information. This Privacy Policy outlines how we collect, use, disclose, and protect the data collected from users of our website.</p>
                     <h4 class="main-h4-other">Information We Collect:</h4>
                     <p class="main-paragraph-other">We collect personal information that you voluntarily provide to us, such as your name, email address, and any other information you choose to share when contacting us, subscribing to newsletters, or submitting feedback forms.</p>
@@ -35,7 +35,7 @@ export default function Privacy() {
                     <p class="main-paragraph-other">If you have any questions or concerns about our Privacy Policy, please contact us at contact@greenenergytracker.com.</p>
                 </div>
             </div>
-        </div>
+        </main>
         <Footer />
     </>
     );

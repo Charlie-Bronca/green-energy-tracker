@@ -6,10 +6,10 @@ export default function Methodologies() {
     return (
     <>
         <NavBar />
-        <div class="main-section-other" id="main-section-scroll">
+        <main class="main-section-other" id="main-section-scroll">
             <div class="main-container-other">
                 <div class="main-column1-other">
-                    <h2 class="main-h2-other">Methodologies</h2>
+                    <h3 class="main-h3-other">Methodologies</h3>
                     <p class="main-paragraph-other">At Green Energy Tracker, we employ rigorous methodologies to ensure the accuracy, reliability, and integrity of the data and insights presented on our platform. Our methodologies encompass a range of research, data collection, analysis, and reporting techniques designed to provide users with comprehensive and actionable information on green energy usage in the United Kingdom.</p>
                     <h4 class="main-h4-other">Research Process:</h4>
                     <p class="main-paragraph-other">Our research process begins with thorough investigation and analysis of existing literature, reports, and data sources related to renewable energy. We conduct in-depth studies to understand the latest trends, technologies, and policy developments shaping the green energy landscape.</p>
@@ -27,7 +27,7 @@ export default function Methodologies() {
                     <p class="main-paragraph-other">We prioritize transparency and accountability in our methodologies, providing users with clear explanations of our research process, data sources, and analytical techniques. We welcome scrutiny and feedback from users, stakeholders, and experts to ensure the integrity and credibility of our work.</p>
                 </div>
             </div>
-        </div>
+        </main>
         <Footer />
     </>
     );

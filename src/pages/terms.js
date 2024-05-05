@@ -6,10 +6,10 @@ export default function Terms() {
     return (
     <>
         <NavBar />
-        <div class="main-section-other" id="main-section-scroll">
+        <main class="main-section-other" id="main-section-scroll">
             <div class="main-container-other">
                 <div class="main-column1-other">
-                    <h2 class="main-h2-other">Terms of Use</h2>
+                    <h3 class="main-h3-other">Terms of Use</h3>
                     <p class="main-paragraph-other">Welcome to Green Energy Tracker! By accessing and using this website, you agree to comply with and be bound by the following terms and conditions of use. Please read these terms carefully before using our website.</p>
                     <h4 class="main-h4-other">1. Acceptance of Terms:</h4>
                     <p class="main-paragraph-other">By accessing or using our website, you acknowledge that you have read, understood, and agree to be bound by these Terms of Use. If you do not agree with any part of these terms, you may not use our website.</p>
@@ -34,7 +34,7 @@ export default function Terms() {
                     <p class="main-paragraph-other">If you have any questions or concerns about these Terms of Use, please contact us at contact@greenenergytracker.com.</p>
                 </div>
             </div>
-        </div>
+        </main>
         <Footer />
     </>
     );

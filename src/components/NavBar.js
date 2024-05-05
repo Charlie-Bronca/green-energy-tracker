@@ -3,7 +3,7 @@ import React from "react";
 export default function NavBar() {
   return (
     <>
-      <div class="nav-bar-other">
+      <nav class="nav-bar-other">
         <div class="nav-container-other">
           <div class="logo-other">
             <a href="/home" class="a-logo-other">
@@ -16,7 +16,7 @@ export default function NavBar() {
             </a>
           </div>
         </div>
-      </div>
+      </nav>
     </>
   );
 }
