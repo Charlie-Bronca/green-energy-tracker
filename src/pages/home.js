@@ -202,9 +202,9 @@ const Home = () => {
       </section>
       <section class="progress-section" id="progress-section-scroll">
         <div class="progress-container">
-          <h2 class="h2-progress">100% Renewable Energy Progress</h2>
+          <h2 class="h2-progress">Renewable Energy Progress</h2>
           <p class="paragraph-progress">
-            The UK has a current goal of reaching 100% renewable energy by the
+            The UK has a current goal of reaching net zero by the
             year 2050.
           </p>
           <ProgressTracker />
