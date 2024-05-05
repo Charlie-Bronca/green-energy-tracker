@@ -12,7 +12,7 @@ export default function NavBar() {
           </div>
           <div class="container-back">
             <a href="/home">
-              <button class="back-button">Back</button>
+              <button class="back-button">Back to Home</button>
             </a>
           </div>
         </div>

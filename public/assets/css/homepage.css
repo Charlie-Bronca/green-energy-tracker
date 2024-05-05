@@ -151,6 +151,22 @@ body {
     padding-right: 10px;
 }
 
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .main-column1,
+    .main-column2 {
+        width: 100%; /* Make both columns take full width */
+    }
+
+    .main-img {
+        display: none; /* Hide the image */
+    }
+}
+
+
 .main-img {
     width: 100%;
     min-width: 0;
@@ -179,6 +195,7 @@ body {
     align-items: center;
     margin-left: 20px;
     margin-right: 20px;
+    flex-wrap: wrap;
 }
 
 .df-logo {
@@ -244,25 +261,34 @@ body {
 
 .energy-generation {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .energy-img {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 45%;
     max-width: 100%;
     padding: 10px;
 }
 
 .current-energy-graph {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    max-width: 350px;
 }
 
 .generation-text {
     width: 50%;
     padding: 10px;
+
+}
+
+@media (max-width: 550px) {
+    .energy-img,
+    .generation-text {
+        width: 100%;
+    }
 }
 
 .energy-icon {
@@ -273,6 +299,13 @@ body {
     color: black;
     font-family: 'Roboto', sans-serif;
     font-size: 22px;
+    font-weight: 500;
+}
+
+.h6-energy-generation {
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
     font-weight: 500;
 }
 

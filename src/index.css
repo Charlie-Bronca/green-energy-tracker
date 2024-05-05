@@ -99,6 +99,13 @@ html {
   padding-bottom: 10px;
 }
 
+@media (max-width: 768px) {
+  .main-column1-other {
+      width: 100%; /* Make the column take full width */
+      padding: 0 10px; /* Add padding to the sides for better readability */
+  }
+}
+
 .main-h2-other {
   display: flex;
   justify-content: center;
@@ -140,4 +147,38 @@ html {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.progress-container2 {
+  width: 80%;
+  height: 100px;
+  background-color: #c5d2b6;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 100px;
+  border: solid;
+  border-radius: 50px;
+}
+
+.progress-bar2 {
+  height: 100px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 30px;
+  color: black;
+  font-size: 25px;
+}
+
+.NotFound-main {
+  margin-top: 100px;
+  padding-top: 200px;
+  padding-bottom: 300px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  font-size: 20px;
 }

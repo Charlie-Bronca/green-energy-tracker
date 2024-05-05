@@ -1,21 +1,32 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Chart from "chart.js/auto";
+import { useNavigate } from "react-router-dom";
+import NotFound from "./NotFound";
 import Navbar from "../components/NavBar";
 import Footer from "../components/Footer";
 
 const PostcodeDisplay = () => {
   // console.log(state)
+  const navigate = useNavigate();
+  const [errors, setErrors] = useState(false);
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const postcode = urlParams.get("postcode");
 
     if (postcode) {
-      fetchChartData(postcode);
+      try {
+        fetchChartData(postcode);
+      } catch (e) {
+        if (e) {
+          setErrors(true);
+        }
+      }
+    } else {
+      document.getElementById("myChart").textContent = "No postcode provided.";
     }
   }, []);
 
   const fetchChartData = (postcode) => {
-    console.log(postcode);
     const ukRegions = {
       AB: "North Scotland",
       AL: "East England",
@@ -141,24 +152,24 @@ const PostcodeDisplay = () => {
     };
 
     const regionIds = {
-      "North Scotland": 1,
-      "South Scotland": 2,
-      "North West England": 3,
-      "North East England": 4,
-      Yorkshire: 5,
-      "North Wales": 6,
-      "South Wales": 7,
-      "West Midlands": 8,
-      "East Midlands": 9,
-      "East England": 10,
-      "South West England": 11,
-      "South England": 12,
-      London: 13,
-      "South East England": 14,
-      England: 15,
-      Scotland: 16,
-      Wales: 17,
-    };
+      'North Scotland': 1,
+      'South Scotland': 2,
+      'North West England': 3,
+      'North East England': 4,
+      'Yorkshire': 5,
+      'North Wales': 6,
+      'South Wales': 7,
+      'West Midlands': 8,
+      'East Midlands': 9,
+      'East England': 10,
+      'South West England': 11,
+      'South England': 12,
+      'London': 13,
+      'South East England': 14,
+      'England': 15,
+      'Scotland': 16,
+      'Wales': 17
+  };
 
     const mySlice = (postcode) => {
       let myPostcode = "";
@@ -179,6 +190,9 @@ const PostcodeDisplay = () => {
 
     const slicedRegionId = mySlice(postcode);
     const region = ukRegions[slicedRegionId];
+    if (!region) {
+      throw new Error("404 Not Found.");
+    }
     if (region) {
       fetch(`https://api.carbonintensity.org.uk/regional`)
         .then((response) => response.json())
@@ -187,6 +201,9 @@ const PostcodeDisplay = () => {
             const regionData = data.data[0].regions.find((regionData) => {
               return regionData.regionid === regionIds[region];
             });
+            if (!regionData) {
+              throw new Error("404: Bad Postcode");
+            }
 
             if (regionData) {
               const generationMix = regionData.generationmix;
@@ -194,7 +211,6 @@ const PostcodeDisplay = () => {
               const labels = generationMix.map((fuel) => fuel.fuel);
               const backgroundColors = getFuelColors(generationMix.length);
 
-              const titleText = `Generation Mix by Fuel Type for ${postcode}`;
               const myChart = new Chart(resultElement, {
                 type: "bar",
                 data: {
@@ -207,30 +223,18 @@ const PostcodeDisplay = () => {
                   ],
                 },
                 options: {
-                  plugins: {
-                    title: {
-                      display: true,
-                      text: titleText,
-                    },
+                  title: {
+                    display: true,
+                    text: "Generation Mix by Fuel Type",
                   },
                   legend: {
                     display: false,
                   },
                 },
               });
-            } else {
-              resultElement.textContent = `No generation mix data available for ${slicedRegionId}.`;
             }
-          } else {
-            resultElement.textContent = "No region data available.";
           }
-        })
-        .catch((error) => {
-          resultElement.textContent =
-            "Error fetching data. Please try again later.";
         });
-    } else {
-      resultElement.textContent = `Invalid postcode area: ${postcode}`;
     }
   };
 
@@ -262,15 +266,20 @@ const PostcodeDisplay = () => {
     }
   };
 
+  if (errors) {
+    return <NotFound />;
+  }
   return (
     <div>
       <Navbar />
+      <div>
       <canvas
         id="myChart"
         width="400"
         height="200"
         class="postcode-main"
       ></canvas>
+      </div>
       <Footer />
     </div>
   );

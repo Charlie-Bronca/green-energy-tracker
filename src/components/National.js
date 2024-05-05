@@ -47,7 +47,7 @@ export default function National() {
     }
 
     return (
-        <div>
+        <div className="current-energy-graph">
             <h1 style={{ fontSize: '30px' }}>Great Britain</h1>
             <canvas id="myChart" width="350" height="350"></canvas>
         </div>
