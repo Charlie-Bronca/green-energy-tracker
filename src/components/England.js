@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Chart from 'chart.js/auto';
 
 function England() {
+  const [altState, setAltState] = useState('');
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -22,6 +24,9 @@ function England() {
     const fuelData = generationMix.map((fuel) => fuel.perc);
     const labels = generationMix.map((fuel) => fuel.fuel);
     const backgroundColors = getFuelColors();
+
+    const altText = labels.map((label, index) => `${label}: ${fuelData[index]}%, `).join('');
+    setAltState(altText);
 
     Chart.defaults.font.size = 10;
     new Chart(ctx, {
@@ -51,7 +56,7 @@ function England() {
   return (
     <div>
       <h1 style={{ fontSize: '20px' }}>England</h1>
-      <canvas id="englandChart" width="250" height="250"></canvas>
+      <canvas id="englandChart" width="250" height="250" alt={altState}></canvas>
     </div>
   );
 }
