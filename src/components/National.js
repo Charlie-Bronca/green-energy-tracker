@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Chart from 'chart.js/auto';
 
 export default function National() {
+    const [altState, setAltState] = useState('');
+
     useEffect(() => {
         async function fetchData() {
             try {
@@ -10,6 +12,9 @@ export default function National() {
                 const data = generationMix.data.generationmix.map(entry => entry.perc);
                 const labels = generationMix.data.generationmix.map(entry => entry.fuel);
                 const backgroundColors = getFuelColors();
+
+                const altText = labels.map((label, index) => `${label}: ${data[index]}%, `).join('');
+                setAltState(altText);
 
                 const ctx = document.getElementById('myChart').getContext('2d');
                 Chart.defaults.font.size = 10;
@@ -49,7 +54,7 @@ export default function National() {
     return (
         <div className="current-energy-graph">
             <h1 style={{ fontSize: '30px' }}>Great Britain</h1>
-            <canvas id="myChart" width="350" height="350"></canvas>
+            <canvas id="myChart" width="350" height="350" alt={altState}></canvas>
         </div>
     );
 }
