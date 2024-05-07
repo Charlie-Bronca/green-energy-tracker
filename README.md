@@ -2,6 +2,29 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### Project Description
+
+Green Energy Tracker is a website that helps users gain insights into energy sources across different regions of Great Britain, enabling them to make informed decisions regarding energy consumption and environmental impact. It utilizes Chart.js and the Carbon Intensity API to display real-time carbon intensity data. Upon loading the web page, users are greeted with an intuitive interface displaying pie charts showcasing carbon intensity levels for various regions such as England, Scotland, and Wales. These charts dynamically update in real-time as new data is fetched from the Carbon Intensity API, providing users with up-to-date information on energy usage patterns across the UK.
+
+To access personalized insights, users can enter their postcode into the search bar. This feature allows users to quickly retrieve detailed information about energy consumption patterns and carbon intensity levels in their specific area. By leveraging Chart.js to render colorful pie charts directly within the browser, Green Energy Tracker empowers users to interpret complex data sets through graphical representations, facilitating greater awareness and engagement in sustainable energy practices. By using this website, users can drive meaningful changes in energy consumption habits and contribute to a more sustainable future.
+
+In addition to providing insights into regional energy consumption and carbon intensity levels, Green Energy Tracker features a progress bar that tracks the UK's progress towards the ‘net-zero emissions by 2050’ goal. This progress bar serves as a visual representation of the nation's efforts to reduce carbon emissions and transition to renewable energy sources. By highlighting the UK's progress towards this target, the web application encourages users to stay informed and engaged in the collective effort to combat climate change. 
+
+### Live Deployment URL
+
+https://charlie-bronca.github.io/green-energy-tracker/
+
+### Citations
+
+https://carbonintensity.org.uk/ Accessed May 7, 2024.
+https://www.nationalgrideso.com/ Accessed May 7, 2024.
+https://www.edfeurope.org/ Accessed May 7, 2024.
+https://www.cs.ox.ac.uk/ Accessed May 7, 2024.
+https://www.wwf.org.uk/ Accessed May 7, 2024.
+https://www.carbonbrief.org/analysis-uk-is-now-halfway-to-meeting-its-net-zero-emissions-target/#:~:text=The%20UK's%20greenhouse%20gas%20emissions,%2Dzero%E2%80%9D%20emissions%20by%202050. Accessed May 7, 2024.
+https://www.gov.uk/government/news/uk-half-way-to-net-zero Accessed May 7, 2024.
+https://commonslibrary.parliament.uk/research-briefings/cbp-9888/ Accessed May 7, 2024.
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -60,29 +83,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/m
 ### Advanced Configuration
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Project Description
-
-Green Energy Tracker is a website that helps users gain insights into energy sources across different regions of Great Britain, enabling them to make informed decisions regarding energy consumption and environmental impact. It utilizes Chart.js and the Carbon Intensity API to display real-time carbon intensity data. Upon loading the web page, users are greeted with an intuitive interface displaying pie charts showcasing carbon intensity levels for various regions such as England, Scotland, and Wales. These charts dynamically update in real-time as new data is fetched from the Carbon Intensity API, providing users with up-to-date information on energy usage patterns across the UK.
-
-To access personalized insights, users can enter their postcode into the search bar. This feature allows users to quickly retrieve detailed information about energy consumption patterns and carbon intensity levels in their specific area. By leveraging Chart.js to render colorful pie charts directly within the browser, Green Energy Tracker empowers users to interpret complex data sets through graphical representations, facilitating greater awareness and engagement in sustainable energy practices. By using this website, users can drive meaningful changes in energy consumption habits and contribute to a more sustainable future.
-
-In addition to providing insights into regional energy consumption and carbon intensity levels, Green Energy Tracker features a progress bar that tracks the UK's progress towards the ‘net-zero emissions by 2050’ goal. This progress bar serves as a visual representation of the nation's efforts to reduce carbon emissions and transition to renewable energy sources. By highlighting the UK's progress towards this target, the web application encourages users to stay informed and engaged in the collective effort to combat climate change. 
-
-### Live Deployment URL
-
-https://charlie-bronca.github.io/green-energy-tracker/
-
-### Citations
-
-https://carbonintensity.org.uk/ Accessed May 7, 2024.
-https://www.nationalgrideso.com/ Accessed May 7, 2024.
-https://www.edfeurope.org/ Accessed May 7, 2024.
-https://www.cs.ox.ac.uk/ Accessed May 7, 2024.
-https://www.wwf.org.uk/ Accessed May 7, 2024.
-https://www.carbonbrief.org/analysis-uk-is-now-halfway-to-meeting-its-net-zero-emissions-target/#:~:text=The%20UK's%20greenhouse%20gas%20emissions,%2Dzero%E2%80%9D%20emissions%20by%202050. Accessed May 7, 2024.
-https://www.gov.uk/government/news/uk-half-way-to-net-zero Accessed May 7, 2024.
-https://commonslibrary.parliament.uk/research-briefings/cbp-9888/ Accessed May 7, 2024.
 
 ### `npm run build` fails to minify
 
