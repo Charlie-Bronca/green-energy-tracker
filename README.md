@@ -34,6 +34,8 @@ https://commonslibrary.parliament.uk/research-briefings/cbp-9888/ Accessed May 7
 
 https://www.chartjs.org/docs/latest/ Accessed May 7, 2024.
 
+https://github.com/CodingTrain/Intro-to-Data-APIs-JS/blob/source/module1/02_graphing_data_exercise_multiple/index.html Accessed May 7, 2024.
+
 ## Available Scripts
 
 In the project directory, you can run:
