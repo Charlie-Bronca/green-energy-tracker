@@ -32,6 +32,8 @@ https://www.gov.uk/government/news/uk-half-way-to-net-zero Accessed May 7, 2024.
 
 https://commonslibrary.parliament.uk/research-briefings/cbp-9888/ Accessed May 7, 2024.
 
+https://www.chartjs.org/docs/latest/ Accessed May 7, 2024.
+
 ## Available Scripts
 
 In the project directory, you can run:
