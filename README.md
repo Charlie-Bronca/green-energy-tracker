@@ -73,6 +73,17 @@ In addition to providing insights into regional energy consumption and carbon in
 
 https://charlie-bronca.github.io/green-energy-tracker/
 
+### Citations
+
+https://carbonintensity.org.uk/ Accessed May 7, 2024.
+https://www.nationalgrideso.com/ Accessed May 7, 2024.
+https://www.edfeurope.org/ Accessed May 7, 2024.
+https://www.cs.ox.ac.uk/ Accessed May 7, 2024.
+https://www.wwf.org.uk/ Accessed May 7, 2024.
+https://www.carbonbrief.org/analysis-uk-is-now-halfway-to-meeting-its-net-zero-emissions-target/#:~:text=The%20UK's%20greenhouse%20gas%20emissions,%2Dzero%E2%80%9D%20emissions%20by%202050. Accessed May 7, 2024.
+https://www.gov.uk/government/news/uk-half-way-to-net-zero Accessed May 7, 2024.
+https://commonslibrary.parliament.uk/research-briefings/cbp-9888/ Accessed May 7, 2024.
+
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
