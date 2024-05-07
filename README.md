@@ -36,6 +36,8 @@ https://www.chartjs.org/docs/latest/ Accessed May 7, 2024.
 
 Adapted from: https://github.com/CodingTrain/Intro-to-Data-APIs-JS/blob/source/module1/02_graphing_data_exercise_multiple/index.html Accessed May 7, 2024.
 
+Adapted from: OpenAI. (2023). ChatGPT (June 16 version) [Large language model]. https://chat.openai.com/chat Accessed May 7, 2024.
+
 ## Available Scripts
 
 In the project directory, you can run:
