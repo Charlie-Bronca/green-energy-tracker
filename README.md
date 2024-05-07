@@ -69,9 +69,9 @@ To access personalized insights, users can enter their postcode into the search 
 
 In addition to providing insights into regional energy consumption and carbon intensity levels, Green Energy Tracker features a progress bar that tracks the UK's progress towards the ‘net-zero emissions by 2050’ goal. This progress bar serves as a visual representation of the nation's efforts to reduce carbon emissions and transition to renewable energy sources. By highlighting the UK's progress towards this target, the web application encourages users to stay informed and engaged in the collective effort to combat climate change. 
 
-### Deployment
+### Live Deployment URL
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+https://charlie-bronca.github.io/green-energy-tracker/
 
 ### `npm run build` fails to minify
 
