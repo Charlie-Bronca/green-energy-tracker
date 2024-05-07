@@ -4,7 +4,6 @@ function ProgressTracker() {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    // Manually update progress (example: 50%)
     setProgress(50);
   }, []);
 

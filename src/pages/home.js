@@ -15,7 +15,6 @@ const Home = () => {
     event.preventDefault();
     const fullPostcode = postcode.toUpperCase().trim();
     navigate(`/postcode?postcode=${encodeURIComponent(fullPostcode)}`);
-    // navigate(`/postcode/graph`, { state:postcode });
   };
 
   const handlePostcodeChange = (event) => {

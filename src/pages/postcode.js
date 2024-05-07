@@ -6,7 +6,6 @@ import Navbar from "../components/NavBar";
 import Footer from "../components/Footer";
 
 const PostcodeDisplay = () => {
-  // console.log(state)
   const navigate = useNavigate();
   const [errors, setErrors] = useState(false);
   useEffect(() => {
